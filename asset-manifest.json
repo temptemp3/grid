@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.c3464974.css",
-    "main.js": "./static/js/main.16bece0f.js",
+    "main.js": "./static/js/main.5509719b.js",
     "static/js/787.db33642e.chunk.js": "./static/js/787.db33642e.chunk.js",
     "static/media/loading.gif": "./static/media/loading.c7e4e44c92f0b19d22e8.gif",
     "static/media/myalgo-wallet.svg": "./static/media/myalgo-wallet.77225e53b0294bf6987fba99a432cba1.svg",
@@ -14,11 +14,11 @@
     "static/media/algo_white.svg": "./static/media/algo_white.56cac7f3278ea02d75aa.svg",
     "static/media/algo_black.svg": "./static/media/algo_black.76717a610360ad8b9485.svg",
     "main.c3464974.css.map": "./static/css/main.c3464974.css.map",
-    "main.16bece0f.js.map": "./static/js/main.16bece0f.js.map",
+    "main.5509719b.js.map": "./static/js/main.5509719b.js.map",
     "787.db33642e.chunk.js.map": "./static/js/787.db33642e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3464974.css",
-    "static/js/main.16bece0f.js"
+    "static/js/main.5509719b.js"
   ]
 }
