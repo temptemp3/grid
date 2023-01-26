@@ -1,9 +1,6 @@
 { 
   "id": 73,
   "config": {
-    "links": [{ "text": "Tools", "href": "/t/0?affiliation=KinnDAO" }],
-    "brand": {
-      "name": " ",
-      "image": "https://search.kinndao.com/images/kinn-logo-white.svg"
-  },
+    "links": [{ "text": "Tools", "href": "/t/0?affiliation=KinnDAO" }]
+  }
 }
