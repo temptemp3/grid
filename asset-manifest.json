@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.922e9fff.css",
-    "main.js": "./static/js/main.d11a8051.js",
+    "main.js": "./static/js/main.789194ff.js",
     "static/js/27.efa2a5b0.chunk.js": "./static/js/27.efa2a5b0.chunk.js",
     "static/media/loading.gif": "./static/media/loading.c7e4e44c92f0b19d22e8.gif",
     "static/media/myalgo-wallet.svg": "./static/media/myalgo-wallet.77225e53b0294bf6987fba99a432cba1.svg",
@@ -16,6 +16,6 @@
   },
   "entrypoints": [
     "static/css/main.922e9fff.css",
-    "static/js/main.d11a8051.js"
+    "static/js/main.789194ff.js"
   ]
 }
