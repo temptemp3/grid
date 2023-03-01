@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.922e9fff.css",
-    "main.js": "./static/js/main.978c2815.js",
+    "main.js": "./static/js/main.61fa2ff0.js",
     "static/js/27.efa2a5b0.chunk.js": "./static/js/27.efa2a5b0.chunk.js",
     "static/media/loading.gif": "./static/media/loading.c7e4e44c92f0b19d22e8.gif",
     "static/media/myalgo-wallet.svg": "./static/media/myalgo-wallet.77225e53b0294bf6987fba99a432cba1.svg",
@@ -10,12 +10,14 @@
     "index.html": "./index.html",
     "static/media/theme_black.svg": "./static/media/theme_black.19218444cc89263b4424.svg",
     "static/media/pera-wallet.svg": "./static/media/pera-wallet.97d07f5173799161e31b2e37b85708d2.svg",
+    "static/media/wallet-connect.svg": "./static/media/wallet-connect.a1aae2e6951e60f34926642947a36f84.svg",
     "static/media/theme_white.svg": "./static/media/theme_white.8df75ef22230386e6db1.svg",
     "static/media/algo_white.svg": "./static/media/algo_white.56cac7f3278ea02d75aa.svg",
+    "static/media/defly-wallet.svg": "./static/media/defly-wallet.e1977f801a78b349dcb5581d28050ad2.svg",
     "static/media/algo_black.svg": "./static/media/algo_black.76717a610360ad8b9485.svg"
   },
   "entrypoints": [
     "static/css/main.922e9fff.css",
-    "static/js/main.978c2815.js"
+    "static/js/main.61fa2ff0.js"
   ]
 }
