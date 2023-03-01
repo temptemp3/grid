@@ -1,0 +1,82 @@
+declare -x SH2='/Users/nicholasshellabarger/Downloads/bots/coinboy/sh2'
+
+coinboy() { bash '/Users/nicholasshellabarger/Downloads/bots/coinboy/clipboy.sh' ${@} ; }
+declare -xf coinboy
+bash() { /opt/homebrew/bin/bash "${@}" ; }
+list-assets () 
+{ 
+    coinboy portfolio:assets | tr ',' '\t'
+}
+_cleanup_desktop_recordings() {
+  local ext="mov"
+  test -d "Recordings" || mkdir -pv "${_}"
+  find . -mindepth 1 -maxdepth 1 -type f -name \*Screen\ Recording\*.${ext} -print0 \
+  | xargs -0 -I {} mv -v "{}" "${_}/"
+}
+_cleanup_desktop_screenshots() {
+  local ext="png"
+  test -d "Screenshots" || mkdir -pv "${_}"
+  find . -mindepth 1 -maxdepth 1 -type f -name \*Screen\ Shot\*.${ext} -print0 \
+  | xargs -0 -I {} mv -v "{}" "${_}/"
+}
+_cleanup_desktop_links() {
+  local ext="webloc"
+  test -d "Links" || mkdir -pv "${_}"
+  find . -mindepth 1 -maxdepth 1 -type f -name \*.${ext} -print0 \
+  | xargs -0 -I {} mv -v "{}" "${_}/"
+}
+_cleanup_desktop() {
+  ${FUNCNAME}_screenshots
+  ${FUNCNAME}_recordings
+  ${FUNCNAME}_links
+}
+_cleanup() {
+  ${FUNCNAME}_desktop
+}
+PATH="${PATH}:~/.yarn/bin"
+_ () {
+	helm -n launcher upgrade --install -f values-dev.yaml contract-launcher charts/contract-launcher
+}
+_sum() {
+  gawk 'BEGIN{SUM=0}{SUM+=$(1)}END{print SUM}' -
+}
+_ipfsls2gawk () {
+	ipfs ls "${1:-cid}" | gawk '{print "s/\""$(3)"\"/\"ipfs:\\/\\/"$(1)"\"/g"}'
+}
+_zb_login_testnet () {
+        curl -X 'POST' -vvv 'https://api.testnet.zestbloom.com/auth/login/' -H 'accept: application/json' -H 'Content-Type: application/x-www-form-urlencoded' -d 'grant_type=&email=nshell%40zestbloom.com&username=&password=ruquuphaeFeb0aix&scope=' --silent | jq -r '.access_token'
+}
+_zb_login_mainnet () {
+        curl -X 'POST' 'https://api.zestbloom.com/auth/login/' -H 'accept: application/json' -H 'Content-Type: application/x-www-form-urlencoded' -d 'grant_type=&email=nshell%40zestbloom.com&username=&password=leprosy.serviceberry.hydroxy&scope='
+}
+_mt_login_testnet() {
+ curl -X 'POST' \
+  'https://api.testnet.motleyestates.com/users/auth/login/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -d 'email=nickat9t%40gmail.com&username=&password=M0ve3xtlwm$2'
+}
+_mt_login_testnet_get_admin_user_by_id() {
+ curl -X 'GET' \
+  "https://api.testnet.motleyestates.com/admin/users/${1}" \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJlbWFpbCI6Im5pY2thdDl0QGdtYWlsLmNvbSIsImV4cCI6MTY3NjUyMzQ5Nn0.hLA-lF_c226mkhPylQEWUpEJ9snmR0WwUxN__vEGkyE' \
+  -H 'Content-Type: application/json' -vvv
+}
+_mt_login_testnet_get_admin_users() {
+ curl -X 'GET' \
+  "https://api.testnet.motleyestates.com/admin/users" \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJlbWFpbCI6Im5pY2thdDl0QGdtYWlsLmNvbSIsImV4cCI6MTY3NjUyMzQ5Nn0.hLA-lF_c226mkhPylQEWUpEJ9snmR0WwUxN__vEGkyE' \
+  -H 'Content-Type: application/json' -vvv
+}
+_mt_login_testnet_kyc_yes() {
+ curl -X 'PATCH' \
+  "https://api.testnet.motleyestates.com/admin/users/${1}" \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJlbWFpbCI6Im5pY2thdDl0QGdtYWlsLmNvbSIsImV4cCI6MTY3NjUyMzQ5Nn0.hLA-lF_c226mkhPylQEWUpEJ9snmR0WwUxN__vEGkyE' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "has_kyc": "true"
+}'
+}
